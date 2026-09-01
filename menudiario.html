@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="menudiario.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <title>Roti Lorenzo</title>
+</head>
+
+<body>
+
+    <div class="cuerpotarjeta">
+
+        <header>
+
+            <img src="rotilorenzocabezaroja.jpeg" alt="Roti Lorenzo">
+
+            <h1>
+                <div class="nombre">ROTISERIA LORENZO</div>
+            </h1>
+
+            <h2 class="perfil">Sabores de la Abuela</h2>
+
+        </header>
+
+        <hr>
+                    <!-- MENÚ DIARIO -->
+        <section class="menudeldia">
+            <div class="botonmenu" onclick="mostrarMenu()">
+                MENÚ DEL DIA
+            </div>
+        </section>
+        <hr>
+
+        <section class="contenido">
+
+            <h3 class="contactos">Contactos</h3>
+
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/5492657702174" target="_blank">
+                <div class="boton">MI WHATSAPP</div>
+            </a>
+
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/rotilorenzo?igsh=N2t0OXo5dm5rdHpi" target="_blank">
+                <div class="boton">MI INSTAGRAM</div>
+            </a>
+
+            <!-- FACEBOOK -->
+            <a href="https://www.facebook.com/share/1BXauDBEBd/" target="_blank">
+                <div class="boton">MI FACEBOOK</div>
+            </a>
+
+
+
+        </section>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- VENTANA DEL MENÚ DIARIO           -->
+    <!-- ================================= -->
+
+    <div id="ventanaMenu" class="modal">
+
+        <div class="contenido-menu">
+
+            <!-- BOTÓN CERRAR -->
+            <span class="cerrar" onclick="cerrarMenu()">&times;</span>
+
+            <!-- IMAGEN DEL MENÚ -->
+            <img src="menu-diario.jpg" alt="Menú diario">
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- JAVASCRIPT                        -->
+    <!-- ================================= -->
+
+    <script>
+
+        // Mostrar el menú
+        function mostrarMenu() {
+
+            document.getElementById("ventanaMenu").style.display = "flex";
+
+        }
+
+
+        // Cerrar el menú
+        function cerrarMenu() {
+
+            document.getElementById("ventanaMenu").style.display = "none";
+
+        }
+
+
+        // Cerrar tocando fuera de la imagen
+        document.getElementById("ventanaMenu").addEventListener("click", function (event) {
+
+            if (event.target === this) {
+
+                cerrarMenu();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
